@@ -157,7 +157,7 @@ class Painting : public Art {
      */
     static int countPaintings(const vector<Painting *> &collection, Style style, int start, int end);
 
-    int appraise() override {
+    int appraise() {
       int price = 0;
       if(this->isReplica() == false && getArtist().getFameScore() > 8) {
         price = appraise() + appraise()*0.66;
